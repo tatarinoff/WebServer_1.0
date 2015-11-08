@@ -20,14 +20,15 @@ public class MainServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String title = req.getParameter("title");
+        HttpSession session = req.getSession();
         try {
             //Factory.getInstance().getBookDAO().addBook(b1);
             //Factory.getInstance().getBookDAO().addBook(b2);
-            bookList = Factory.getInstance().getBookDAO().getAllBooks();
+            bookList = Factory.getInstance().getBookDAO().getBookByTitle(title);
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        HttpSession session = req.getSession();
         session.setAttribute("bookList", bookList);
         RequestDispatcher reqDisp = getServletContext().getRequestDispatcher("/result.jsp");
         reqDisp.forward(req, resp);

@@ -20,7 +20,8 @@ public class BookDAOImpl implements BookDAO {
             books = session.createCriteria(Book.class).list();
             int size = books.size();
             for (int i = 0; i < size; i++) {
-                if (!((Book) books.get(i)).getTitle().equals(title)) {
+                if (!((Book) books.get(i)).getTitle().contains(title)) {
+//                if (!((Book) books.get(i)).getTitle().equals(title)) {
                     books.remove(i);
                     size--;
                     i--;
