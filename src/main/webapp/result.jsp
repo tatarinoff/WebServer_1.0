@@ -16,9 +16,10 @@
 </head>
 <body>
 <h1>Books result set</h1>
+
+<h2>Now we have such books, which are equal to your querry</h2>
 <table width="650" cellpadding="5" cellspacing="0">
     <thead>
-    <tr><h2>Now we have such books, which are equal to your querry</h2></tr>
     <tr>
         <td class="col1">#id</td>
         <td class="col2">Title</td>

@@ -38,7 +38,7 @@ public class BookDAOImpl implements BookDAO {
     }
 
     @Override
-    public List<Book> getAllBooks() throws SQLException {
+    public List getAllBooks() throws SQLException {
         Session session = null;
         List books = new ArrayList<Book>();
         try {

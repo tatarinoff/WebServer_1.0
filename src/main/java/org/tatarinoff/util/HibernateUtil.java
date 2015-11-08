@@ -15,8 +15,6 @@ public class HibernateUtil {
 
             Configuration configuration = new Configuration();
             configuration.configure();
-            //Use config file path explicitly
-            //configuration.configure("hibernate/hibernate.cfg.xml");
             serviceRegistry = new StandardServiceRegistryBuilder()
                     .applySettings(configuration.getProperties()).build();
             sessionFactory = configuration
