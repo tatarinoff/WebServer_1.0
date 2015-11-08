@@ -1,5 +1,5 @@
-<%@ page import="org.tatarinoff.DAO.BookDAO" %>
 <%@ page import="org.tatarinoff.entity.Book" %>
+<%@ page import="java.util.List" %>
 <%--
   Created by IntelliJ IDEA.
   User: k-labs
@@ -26,8 +26,7 @@
     </tr>
     </thead>
     <tbody>
-    <% try {
-        for (Object book : BookDAO.BOOKS_DAO_INST.getBookByTitle(request.getParameter("title"))) {%>
+    <% for (Object book : (List) session.getAttribute("bookList")) {%>
     <tr>
         <td class="col1"><%=((Book) book).getBookId()%>
         </td>
@@ -36,12 +35,7 @@
         <td class="col3"><%=((Book) book).getAuthor()%>
         </td>
     </tr>
-    <%
-            }
-        } catch (java.sql.SQLException e) {
-            e.printStackTrace();
-        }
-    %>
+    <%}%>
     </tbody>
 </table>
 </body>
