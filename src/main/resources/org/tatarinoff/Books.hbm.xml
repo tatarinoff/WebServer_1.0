@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="org.tatarinoff.entity.Book" table="books" catalog="sys">
+        <id name="bookId" type="java.lang.Integer">
+            <column name="BOOK_ID"/>
+            <generator class="identity"/>
+        </id>
+        <property name="title" type="string">
+            <column name="TITLE" length="50" not-null="true" unique="true"/>
+        </property>
+        <property name="author" type="string">
+            <column name="AUTHOR" length="50" not-null="true" unique="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,32 @@
+[
+  {
+    "BOOK_ID": 1,
+    "TITLE": "ALice in WonderLand",
+    "AUTHOR": "Lewis Carrol"
+  },
+  {
+    "BOOK_ID": 2,
+    "TITLE": "Physics for newbs",
+    "AUTHOR": "Issac Newton"
+  },
+  {
+    "BOOK_ID": 3,
+    "TITLE": "ALice in WonderLand",
+    "AUTHOR": "Lewis Carrol"
+  },
+  {
+    "BOOK_ID": 4,
+    "TITLE": "Physics for newbs",
+    "AUTHOR": "Issac Newton"
+  },
+  {
+    "BOOK_ID": 5,
+    "TITLE": "1st Big Encyclopedy",
+    "AUTHOR": "UchPedGiz"
+  },
+  {
+    "BOOK_ID": 6,
+    "TITLE": "2nd Big Encyclopedy",
+    "AUTHOR": "UchPedGiz"
+  }
+]
