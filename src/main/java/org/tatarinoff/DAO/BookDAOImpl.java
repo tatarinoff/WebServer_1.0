@@ -11,7 +11,6 @@ import java.util.List;
 
 public class BookDAOImpl implements BookDAO {
 
-    @Override
     public List getBookByTitle(String title) throws SQLException {
         Session session = null;
         List books = new ArrayList<Book>();
@@ -37,7 +36,6 @@ public class BookDAOImpl implements BookDAO {
         return books;
     }
 
-    @Override
     public List getAllBooks() throws SQLException {
         Session session = null;
         List books = new ArrayList<Book>();
