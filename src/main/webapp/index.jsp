@@ -21,14 +21,11 @@
     </tr>
     </thead>
     <tbody>
-    <% for (Object book : (List) session.getAttribute("bookList")) {%>
+    <% for (Book book : (List<Book>) session.getAttribute("bookList")) {%>
     <tr>
-        <td class="col1"><%=((Book) book).getBookId()%>
-        </td>
-        <td class="col2"><%=((Book) book).getTitle()%>
-        </td>
-        <td class="col3"><%=((Book) book).getAuthor()%>
-        </td>
+        <td class="col1"><%=book.getBookId()%></td>
+        <td class="col2"><%=book.getTitle()%></td>
+        <td class="col3"><%=book.getAuthor()%></td>
     </tr>
     <%}%>
     </tbody>
